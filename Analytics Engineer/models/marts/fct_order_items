@@ -1,0 +1,20 @@
+select 
+    oi.order_id,
+    oi.order_item_id,
+    o.customer_id,
+    oi.seller_id,
+    oi.product_id,
+    o.order_purchase_timestamp,
+    o.order_delivered_customer_date,
+    o.order_estimated_delivery_date,
+    oi.price,
+    oi.freight_value,
+    case 
+        when o.order_delivered_customer_date is not null 
+        then extract(day from o.order_delivered_customer_date - o.order_estimated_delivery_date)
+    end as delivery_delay_days,
+    sum(oi.price) over(
+        partition by oi.seller_id, date_trunc('month', o.order_purchase_timestamp)
+    ) as seller_monthly_revenue
+from {{ ref('stg_order_items') }} oi
+join {{ ref('stg_orders') }} o on oi.order_id = o.order_id
