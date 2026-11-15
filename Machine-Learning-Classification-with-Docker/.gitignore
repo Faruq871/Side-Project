@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files 
+models/
+*.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
