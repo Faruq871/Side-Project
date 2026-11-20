@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: fct_orders
+    description: One row per order, enriched with item-level value aggregates.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null

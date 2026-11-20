@@ -1,0 +1,12 @@
+olist:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'localhost') }}"
+      user: "{{ env_var('POSTGRES_USER', 'olist') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'olist_dev_password') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_DB', 'olist_dw') }}"
+      schema: analytics
+      threads: 4
