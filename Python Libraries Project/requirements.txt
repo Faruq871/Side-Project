@@ -1,0 +1,30 @@
+# Notebook environment
+jupyterlab
+ipykernel
+
+# Data and scientific computing
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+
+# Visualization
+matplotlib
+seaborn
+plotly
+kaleido
+
+# Database
+SQLAlchemy
+
+# Cross-language interfaces
+rpy2
+pythonnet
+JPype1
+py4j
+cffi
+cppyy
+
+# Model persistence
+joblib
