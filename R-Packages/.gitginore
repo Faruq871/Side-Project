@@ -1,0 +1,10 @@
+# R specific
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# OS specific
+.DS_Store
+Thumbs.db
