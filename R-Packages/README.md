@@ -14,3 +14,12 @@ To execute the code chunks within these documents, ensure the following packages
 
 ```r
 install.packages(c("dplyr", "ggplot2", "tidyr", "knitr", "rmarkdown"))
+```
+
+## How to Use
+Clone this repository to your local machine.
+Open RStudio or your preferred R IDE.
+Navigate to the R-Packages/code/ directory.
+Open any .R file and execute the code line-by-line or source the entire script.
+
+
